@@ -1,0 +1,65 @@
+$layouts: (6 6)
+          (3 3 3 3)
+          (4 4 4)
+          (4 4 2 2)
+          (2 2 4 4)
+          (4 2 2 4)
+          (2 4 4 2)
+          (3 9)
+          (9 3)
+          (4 8)
+          (5 7)
+          (7 5)
+          (8 4)
+          (2 8 2)
+          (2 2 8)
+          (8 2 2)
+          (2 4 3 3)
+          (4 2 3 3)         
+          (3 7 2)         
+          (3 2 7)         
+          (2 3 7)         
+          (2 7 3)         
+          (7 2 3)         
+          (7 3 2)         
+          (2 4 6)
+          (2 6 4)
+          (6 2 4)
+          (6 4 2)
+          (4 2 6)
+          (4 6 2);
+
+$colors: red blue green yellow pink purple;
+
+@each $color in $colors {
+    .#{$color} {
+      background: $color;
+      height: 50px;
+    }
+}
+
+@function add_fr($set) {
+  $columns: "";
+  @each $value in $set {
+    $columns: #{$columns} $value + fr;
+  }
+  @return $columns;
+}
+
+@function getCustomLayoutValues($values...) {
+  $templateColumns: "";
+  @each $set in $values {
+    $templateColumns: add_fr($set);
+  } 
+  
+  @return  $templateColumns;
+}
+  
+@each $layout in $layouts {
+    [custom-layout="#{$layout}"] {
+      display: grid;
+      grid-template-columns: getCustomLayoutValues($layout);
+      border: 2px solid black;
+      margin-bottom: .5em; 
+    }
+}
