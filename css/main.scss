@@ -29,7 +29,7 @@ $layouts: (6 6)
           (4 2 6)
           (4 6 2);
 
-$colors: red blue green yellow pink purple;
+$colors: CornflowerBlue  CadetBlue Aquamarine  Aqua LightCyan LightSteelBlue ;
 
 @each $color in $colors {
     .#{$color} {
@@ -68,7 +68,7 @@ $screen-md-max:	1199px;
 }
 @media only screen and (max-width: $screen-xs-max) and (min-width: $screen-xs-min)  {  
   *{
-    background-color: rgb(1, 255, 208);
+    background-color: PaleGreen;
   }    
   @function getCustomLayoutValues($values...) {
     $templateColumns: "";
@@ -107,7 +107,7 @@ $screen-md-max:	1199px;
 
 @media only screen and (min-width: $screen-xs-max)  {
   *{
-    background-color: yellow;
+    background-color: black;
   }
   @function getCustomLayoutValues($values...) {
     $templateColumns: "";

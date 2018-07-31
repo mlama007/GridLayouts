@@ -1,25 +1,25 @@
-.red {
-  background: red;
+.CornflowerBlue {
+  background: CornflowerBlue;
   height: 50px;
 }
-.blue {
-  background: blue;
+.CadetBlue {
+  background: CadetBlue;
   height: 50px;
 }
-.green {
-  background: green;
+.Aquamarine {
+  background: Aquamarine;
   height: 50px;
 }
-.yellow {
-  background: yellow;
+.Aqua {
+  background: Aqua;
   height: 50px;
 }
-.pink {
-  background: pink;
+.LightCyan {
+  background: LightCyan;
   height: 50px;
 }
-.purple {
-  background: purple;
+.LightSteelBlue {
+  background: LightSteelBlue;
   height: 50px;
 }
 @media only screen and (max-width: 479px) {
@@ -209,7 +209,7 @@
 }
 @media only screen and (max-width: 767px) and (min-width: 480px) {
   * {
-    background-color: #01ffd0;
+    background-color: PaleGreen;
   }
   [custom-layout="6 6"] {
     display: grid;
@@ -394,7 +394,7 @@
 }
 @media only screen and (min-width: 767px) {
   * {
-    background-color: yellow;
+    background-color: black;
   }
   [custom-layout="6 6"] {
     display: grid;
