@@ -206,6 +206,36 @@
     border: 2px solid black;
     margin-bottom: 0.5em;
   }
+  [custom-layout="3"] {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+  }
+  [custom-layout="4"] {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+  }
+  [custom-layout="6"] {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+  }
+  [custom-layout="8"] {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+  }
+  [custom-layout="9"] {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+  }
 }
 @media only screen and (max-width: 767px) and (min-width: 480px) {
   * {
@@ -391,6 +421,36 @@
     border: 2px solid black;
     margin-bottom: 0.5em;
   }
+  [custom-layout="3"] {
+    display: grid;
+    grid-template-columns:  30%;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+  }
+  [custom-layout="4"] {
+    display: grid;
+    grid-template-columns:  40%;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+  }
+  [custom-layout="6"] {
+    display: grid;
+    grid-template-columns:  60%;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+  }
+  [custom-layout="8"] {
+    display: grid;
+    grid-template-columns:  80%;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+  }
+  [custom-layout="9"] {
+    display: grid;
+    grid-template-columns:  90%;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+  }
 }
 @media only screen and (min-width: 767px) {
   * {
@@ -573,6 +633,36 @@
   [custom-layout="4 6 2"] {
     display: grid;
     grid-template-columns:  4fr 6fr 2fr;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+  }
+  [custom-layout="3"] {
+    display: grid;
+    grid-template-columns:  30%;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+  }
+  [custom-layout="4"] {
+    display: grid;
+    grid-template-columns:  40%;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+  }
+  [custom-layout="6"] {
+    display: grid;
+    grid-template-columns:  60%;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+  }
+  [custom-layout="8"] {
+    display: grid;
+    grid-template-columns:  80%;
+    border: 2px solid black;
+    margin-bottom: 0.5em;
+  }
+  [custom-layout="9"] {
+    display: grid;
+    grid-template-columns:  90%;
     border: 2px solid black;
     margin-bottom: 0.5em;
   }

@@ -27,7 +27,12 @@ $layouts: (6 6)
           (6 2 4)
           (6 4 2)
           (4 2 6)
-          (4 6 2);
+          (4 6 2)
+          (3)
+          (4)
+          (6)
+          (8)
+          (9);
 
 $colors: CornflowerBlue  CadetBlue Aquamarine  Aqua LightCyan LightSteelBlue ;
 
@@ -41,7 +46,6 @@ $colors: CornflowerBlue  CadetBlue Aquamarine  Aqua LightCyan LightSteelBlue ;
 
 
 // ----------Breakpoint----------
-
 $screen-xs-min:	480px;
 $screen-sm-min:	768px;
 $screen-md-min:	992px;
@@ -80,11 +84,22 @@ $screen-md-max:	1199px;
       @else if $length == 4 {
         $templateColumns: 1fr 1fr;
       }
+      @else if $length == 1 {
+        $templateColumns: add_per($set);
+      }
       @else {
         $templateColumns: add_fr($set);
       }
     } 
     @return  $templateColumns;  
+  }
+
+  @function add_per($set) {
+    $columns: "";
+    @each $value in $set {
+      $columns: #{$columns} $value + '0%';
+    }
+    @return $columns;
   }
 
   @function add_fr($set) {
@@ -112,11 +127,25 @@ $screen-md-max:	1199px;
   @function getCustomLayoutValues($values...) {
     $templateColumns: "";
     @each $set in $values {
-      $templateColumns: add_fr($set);
+      $length: length($set);
+      @if $length == 1 {
+        $templateColumns: add_per($set);
+      }
+      @else {
+        $templateColumns: add_fr($set);
+      }
     } 
     @return  $templateColumns;  
   }
-  
+
+  @function add_per($set) {
+    $columns: "";
+    @each $value in $set {
+      $columns: #{$columns} $value + '0%';
+    }
+    @return $columns;
+  }
+
   @function add_fr($set) {
     $columns: "";
     @each $value in $set {
@@ -124,7 +153,7 @@ $screen-md-max:	1199px;
     }
     @return $columns;
   }
-    
+
   @each $layout in $layouts {
       [custom-layout="#{$layout}"] {
         display: grid;
